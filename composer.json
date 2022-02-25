@@ -1,7 +1,7 @@
 {
-    "name": "eylmz/wd-mvc",
+    "name": "haktanakdag/phpmvc",
     "type": "project",
-    "description": "PHP WD MVC Framework",
+    "description": "PHP Çalışmaları",
     "keywords": [
         "php",
         "wd",
@@ -9,13 +9,13 @@
         "mini",
         "framework"
     ],
-    "homepage": "https://github.com/eylmz058/PHP-MVC",
+    "homepage": "https://github.com/haktanakdag",
     "license": "MIT",
     "authors": [
         {
-            "name": "Emre YILMAZ",
-            "email": "eylmz058@gmail.com",
-            "homepage": "http://emre.pw",
+            "name": "Haktan AKDAĞ",
+            "email": "haktan.akdag@gmail.com",
+            "homepage": "www.dokuzsistem.com",
             "role": "Developer"
         }
     ],
