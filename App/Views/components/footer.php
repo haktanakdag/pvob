@@ -10,6 +10,9 @@
     <script src="public/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
     <script src="public/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <script src="public/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+
+
+
     <script>
         (function($) {
             "use strict";
@@ -41,7 +44,7 @@
     <script src="public/vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
     <script src="public/assets/js/init-scripts/data-table/datatables-init.js"></script>
 
-
+ 
 </body>
 
 </html>
