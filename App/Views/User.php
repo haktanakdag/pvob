@@ -58,6 +58,9 @@ include ("../core/libx.php");
                 if($yeniekle=="true"){
                    include "UserForm.php";
                 }
+                if($duzenle=="true"){
+                    include "UserForm.php&duzenleid=1";
+                 }
             ?>
             <div class="animated fadeIn">
                 <div class="row">
