@@ -9,6 +9,7 @@ class UserController extends Framework {
 
     public function __construct(){
 
+        
         //$this->view("Dashboard");
     }
 

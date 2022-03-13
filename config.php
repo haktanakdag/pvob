@@ -1,4 +1,5 @@
 <?php
+
     define("APP_URL", "http://localhost/");
     define("PUBLIC_URL", APP_URL."Public/");
 
@@ -17,3 +18,5 @@
     define("DB_USERNAME", "root");
     define("DB_PASSWORD", "");
     define("DB_CHARSET", "utf8");
+
+ 

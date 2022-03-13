@@ -191,13 +191,14 @@
             $class=$ozellikler['class'];
             $action =$ozellikler['action'];
             $href = $_SERVER['REQUEST_URI']."&".$ozellikler['href'];
-            $exphref = explode("&",$href);
+            
+            /*$exphref = explode("&",$href);
             if(count($exphref)>2){  
                 $href =$exphref[0]."&". $name;
             }else{
                 $exphref = explode("?",$href);
                 $href ="?".$exphref[1];
-            }
+            }*/
             
             if($action=="modal"){
                 $modaltype =$ozellikler['modaltype'];

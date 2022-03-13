@@ -6,6 +6,7 @@ use System\Helpers\Session;
 class DashboardController extends Framework {
 
 public function __construct(){
+
   
 }
 
