@@ -190,7 +190,8 @@
             $type=$ozellikler['type'];
             $class=$ozellikler['class'];
             $action =$ozellikler['action'];
-            $href = $_SERVER['REQUEST_URI']."&".$ozellikler['href'];
+            //$href = $_SERVER['REQUEST_URI']."&".$ozellikler['href'];
+            $href = $ozellikler['href'];
             
             /*$exphref = explode("&",$href);
             if(count($exphref)>2){  
@@ -217,12 +218,12 @@
         public function doSubmit($ozellikler){
             //print_r($ozellikler);
             $name=$ozellikler['name'];
-            $id=$ozellikler['id'];
+            $id=$ozellikler['Id'];
             $value=$ozellikler['value'];
             $type=$ozellikler['type'];
             $class=$ozellikler['class'];
             $iclass=$ozellikler['iclass'];
-            echo "<button type='$type' class='$class'><i class='$iclass'></i> $value</button>";
+            echo "<button type='$type' name='$name' id='$name' class='$class'><i class='$iclass'></i> $value</button>";
             //echo "<input type='submit' name='$ozellikler[0]' id='$ozellikler[0]' value='$ozellikler[1]' class='btn'>";
         }
             

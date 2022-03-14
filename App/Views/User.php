@@ -37,7 +37,7 @@ include ("../core/libx.php");
                                 'type'=> "button",
                                 'class'=> "btn btn-secondary mb-1",
                                 "action"=>"include",//modal,newpage,include,popup
-                                "href"=>"yeniekle=true" ,//modal,newpage,include,popup
+                                "href"=>"?menu=$menu&yeniekle=true" ,//modal,newpage,include,popup
                                 "modaltype"=>"mediumModal"
                                ];
                             $form->doButton($ButtonObjects); 
@@ -55,12 +55,12 @@ include ("../core/libx.php");
         <div class="card">
         <div class="card-header">
             <?php 
-                if($yeniekle=="true"){
-                   include "UserForm.php";
-                }
-                if($duzenle=="true"){
-                    include "UserForm.php&duzenleid=1";
-                 }
+            if($yeniekle=="true"){
+                include "UserForm.php";
+            }
+            if($duzenleid){
+                include "UserForm.php&duzenleid=1";
+            }
             ?>
             <div class="animated fadeIn">
                 <div class="row">
