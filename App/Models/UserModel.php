@@ -15,6 +15,13 @@
         }
     }
 
+    public function setData($data){
+        foreach ($data as $d){
+            echo $d;
+        }
+        return $d;
+    }
+
     public function getDataId($userId){
         if($this->Query("SELECT * FROM users WHERE userId = ? ", [$userId])){
         $data = $this->fetchAll();

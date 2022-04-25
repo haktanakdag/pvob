@@ -19,13 +19,14 @@ class UserController extends Framework {
         $this->view("User",$data);
     }
 
+    public function insertData($data){
+        $model = new UserModel();
+        $return = $model->setData($data);
+        return $return;
+    }
+
     public function GetUsers(){
-        $data = [
-
-            'ad'=> "haktan",
-            'soyad'=> "akdag"
-           ];
-
+        $data = ['ad'=> "haktan",'soyad'=> "akdag"];
         $this->view("User",$data);
     }
  
