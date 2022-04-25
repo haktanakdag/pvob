@@ -20,7 +20,6 @@ include ("../core/libx.php");
                     <h1>Panel</h1>
                 </div>
             </div>
-<<<<<<< HEAD
         </div>
         <div class="col-sm-8">
             <div class="page-header float-right">
@@ -39,42 +38,12 @@ include ("../core/libx.php");
                         </li>
                         </li>
                     </ol>
-=======
-            
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a class="btn btn-outline-primary" href="javascript:history.go(-1)" role="button">Geri</a></li>
-                            <li><a class="btn btn-outline-primary" href="javascript:location.reload();" role="button">Yenile</a></li>
-                            <li>
-                            <?php 
-                            $ButtonObjects = [
-                                'id'=> "yeniekle",
-                                'name'=> "yeniekle",
-                                'value'=> "Yeni Ekle",
-                                'type'=> "button",
-                                'class'=> "btn btn-secondary mb-1",
-                                "action"=>"include",//modal,newpage,include,popup
-                                "href"=>"?menu=$menu&yeniekle=true" ,//modal,newpage,include,popup
-                                "modaltype"=>"mediumModal"
-                               ];
-                            $form->doButton($ButtonObjects); 
-                            ?>
-                            </li>
-                            </li>
-                        </ol>
-                    </div>
-                   
-                    
->>>>>>> 6f7789b66d0dac4e02041fae7868deef1cd4eed8
                 </div>
             </div>
         </div>
     </div>
         <?php include "components/modal.php" ?>
         <div class="card">
-<<<<<<< HEAD
             <div class="card-header">
                 <strong>Kullanıcı</strong> Form
             </div>
@@ -117,30 +86,6 @@ include ("../core/libx.php");
                         ,"gridTable"
                         );
                     ?>
-=======
-        <div class="card-header">
-            <?php 
-            if($yeniekle=="true"){
-                include "UserForm.php";
-            }
-            if($duzenleid){
-                include "UserForm.php&duzenleid=1";
-            }
-            ?>
-            <div class="animated fadeIn">
-                <div class="row">
-                    <div class="col-md-12">
-                        <?php
-                            $form->doGrid(
-                            array(array("No",'5%'),array("Ad Soyad",'50%'),array("Email",'50%'),)
-                            ,array("id","adsoyad","email")
-                            ,$data
-                            ,array(array("sil",$sayfaad,"Sil"),array("duzenle",$sayfaadDuzenle,"Düzenle"),array("refid",$sayfaadResimler,"Resimler","resPopUp(#)"))
-                            ,"gridTable"
-                            );
-                        ?>
-                    </div>
->>>>>>> 6f7789b66d0dac4e02041fae7868deef1cd4eed8
                 </div>
             </div>
         </div>
