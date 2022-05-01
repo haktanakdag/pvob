@@ -20,9 +20,10 @@ class UserController extends Framework {
     }
 
     public function insertData($data){
-        $model = new UserModel();
+        echo $data;
+        /*$model = new UserModel();
         $return = $model->setData($data);
-        return $return;
+        return $return;*/
     }
 
     public function GetUsers(){

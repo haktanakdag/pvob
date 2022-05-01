@@ -204,10 +204,14 @@
             if($action=="modal"){
                 $modaltype =$ozellikler['modaltype'];
                 $modaltoggle = "data-toggle='modal'";
-                echo "<button type='$type' name='$name' id='$id' class='$class' $modaltoggle data-target='#$modaltype'>$value</button>";
+
+                if($modaltype =="mediumModal"){
+                    echo "<button type='$type' name='$name' id='$id' class='$class' $modaltoggle data-target='#$modaltype'>$value</button>";
+                }
             }
             if($action=="include"){
-                echo "<a class='$class' href='$href' role='$type'>$value</a>";
+                $adres = $_SERVER['REQUEST_URI'];
+                echo "<a class='$class' href='".$adres."&islem=$href' role='$type'>$value</a>";
             }
             if($action=="newpage"){
                 echo "<button type='$type' name='$name' id='$id' class='$class'>$value</button>";

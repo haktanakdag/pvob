@@ -1,13 +1,13 @@
 <?php
 use App\Controllers\UserController;
 use System\Core\Form;
-error_reporting(0);
 ob_start();
 session_start();
 extract($_GET);
 extract($_POST);
 ob_flush();  
 $form = new Form();
+$user = new UserController();
 ?>
 <?php
 include ("../core/libx.php");
@@ -29,8 +29,8 @@ include ("../core/libx.php");
                         <li><a class="btn btn-outline-primary" href="javascript:location.reload();" role="button">Yenile</a></li>
                         <li>
                         <?php 
-                        $ButtonObjects = ['id'=> "yeniekle",'name'=> "yeniekle",'value'=> "Yeni Ekle",'type'=> "button",'class'=> "btn btn-secondary mb-1","action"=>"modal",//modal,newpage,include,popup
-                            "href"=>"yeniekle" ,//modal,newpage,include,popup
+                        $ButtonObjects = ['id'=> "yeniekle",'name'=> "yeniekle",'value'=> "Yeni Ekle",'type'=> "button",'class'=> "btn btn-secondary mb-1","action"=>"include",//modal,newpage,include,popup
+                            "href"=>"yeniekle" ,//modal(mediumModal),newpage,include,popup
                             "modaltype"=>"mediumModal"
                             ];
                         $form->doButton($ButtonObjects); 
@@ -43,37 +43,8 @@ include ("../core/libx.php");
         </div>
     </div>
         <?php include "components/modal.php" ?>
-        <div class="card">
-            <div class="card-header">
-                <strong>Kullanıcı</strong> Form
-            </div>
-            <?php
-                $formObjects =["name"=>"userform","id"=>"userform","action"=>$_SERVER['REQUEST_URI'],"method"=>"post","class"=>""];
-                $form->doForm("basla",$formObjects);
-            ?>
-            <form action="<?=$_SERVER['REQUEST_URI']?>" id="userform" method="post" class="">
-            <div class="card-body card-block">
-            <?php   
-                $UserNameSurnameObjects = ['id'=> "adsoyad",'name'=> "adsoyad",'value'=> "Ad Soyad",'type'=> "text",'class'=>"form-control",'placeholder'=>"Ad Soyad"]; 
-                $form->doInput($UserNameSurnameObjects); 
-            ?>
-            <?php   
-                $UserNameSurnameObjects = ['id'=> "eposta",'name'=> "eposta",'value'=> "EPosta",'type'=> "text",'class'=>"form-control",'placeholder'=>"EPosta"]; 
-                $form->doInput($UserNameSurnameObjects); 
-            ?>
-            </div>
-            <div class="card-footer">
-            <?php
-                $SubmitButtonObjects =["name"=>"kaydet","Id" =>"kaydet","value"=>"Kaydet","type"=>"submit","class"=>"btn btn-primary btn-sm","iclass"=>"fa fa-dot-circle-o"];
-                $form->doSubmit($SubmitButtonObjects);
-            ?>
-            <?php
-                $ResetButonObjects = ['formname'=>'userform'];
-                $form->doResetButton($ResetButonObjects);
-            ?>
-            </div>
-            <?php $form->doForm("bitir",$formObjects);  ?>
-        </div>
+
+        <?php if($islem=="yeniekle"){ include "UserForm.php"; } ?>
         <div class="animated fadeIn">
             <div class="row">
                 <div class="col-md-12">
