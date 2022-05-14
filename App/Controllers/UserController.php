@@ -20,7 +20,11 @@ class UserController extends Framework {
     }
 
     public function insertData($data){
-        echo $data;
+        //print_r($data);
+        foreach($d as $data){
+            echo $d->name;
+            echo $d->eposta;
+        }
         /*$model = new UserModel();
         $return = $model->setData($data);
         return $return;*/

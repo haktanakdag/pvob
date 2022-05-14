@@ -1,6 +1,7 @@
 <div class="card">
     <?php
-    $user->insertData("asdasd");
+    $userObjects=["name"=>$adsoyad,"eposta"=>$eposta];
+    $user->insertData($userObjects);
     ?>
             <div class="card-header">
                 <strong>Kullanıcı</strong> Form
