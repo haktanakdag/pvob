@@ -15,11 +15,17 @@
         }
     }
 
-    public function setData($data){
+    public function setData($dataid,$data){
+        print_r($data);
+        /*if ($dataid =0){
+            //insert yazacam
+        }else{
+            //update yapacam
+        }
         foreach ($data as $d){
             echo $d;
         }
-        return $d;
+        return $d;*/
     }
 
     public function getDataId($userId){

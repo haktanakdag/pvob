@@ -6,6 +6,7 @@
             $satirlar="";
             $baslik="";
             $sonuc="";
+            $kolonlar="";
             $baslik = "<div class='card'><div class='card-header'><strong class='card-title'>Kullanıcılar</strong></div><div class='card-body'>";
             $baslik = $baslik ."<table id='bootstrap-data-table-export' class='table table-striped table-bordered'>";
             $baslik = $baslik."<thead><tr>";
@@ -120,7 +121,7 @@
             {
                 $name=$ozellikler['name'];
                 $id=$ozellikler['id'];
-                $value=$ozellikler['value'];
+                $value=@$ozellikler['value'];
                 $class=$ozellikler['class'];
                 $action=$ozellikler['action'];
                 $method=$ozellikler['method'];

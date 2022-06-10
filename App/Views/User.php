@@ -2,16 +2,18 @@
 use App\Controllers\UserController;
 use System\Core\Form;
 ob_start();
-session_start();
+//session_start();
 extract($_GET);
 extract($_POST);
 ob_flush();  
 $form = new Form();
 $user = new UserController();
+$sayfaad=".";
+$sayfaadEkle=".";
+$sayfaadDuzenle=".";
+$sayfaadResimler=".";
 ?>
-<?php
-include ("../core/libx.php");
-?>
+
 <?php include "components/header.php" ?>
     <div class="breadcrumbs">
         <div class="col-sm-4">
@@ -43,7 +45,6 @@ include ("../core/libx.php");
         </div>
     </div>
         <?php include "components/modal.php" ?>
-
         <?php if($islem=="yeniekle"){ include "UserForm.php"; } ?>
         <div class="animated fadeIn">
             <div class="row">

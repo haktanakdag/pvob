@@ -8,7 +8,6 @@ use App\Models\UserModel;
 class UserController extends Framework {
 
     public function __construct(){
-
         //$this->view("Dashboard");
     }
 
@@ -19,16 +18,20 @@ class UserController extends Framework {
         $this->view("User",$data);
     }
 
-    public function insertData($data){
-        //print_r($data);
-        foreach($d as $data){
+    public function SetData($dataid,$data){
+        print_r($data);
+        $model = new UserModel();
+        $return = $model->setData($dataid,$data);
+       /* foreach($d as $data){
             echo $d->name;
             echo $d->eposta;
-        }
-        /*$model = new UserModel();
-        $return = $model->setData($data);
-        return $return;*/
+        }*/
+        
+       
+        return $return;
     }
+
+   
 
     public function GetUsers(){
         $data = ['ad'=> "haktan",'soyad'=> "akdag"];
