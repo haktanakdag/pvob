@@ -1,4 +1,15 @@
 <?php
+try {
+    // try body
+} catch (FirstExceptionType $e) {
+    // catch body
+} catch (OtherExceptionType $e) {
+    // catch body
+}
+
+?>
+
+<?php
 use App\Controllers\UserController;
 use System\Core\Form;
 ob_start();

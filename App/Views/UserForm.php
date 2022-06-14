@@ -1,17 +1,19 @@
 <div class="card">
     <?php
-
         $userObjects=["name"=>$adsoyad,"eposta"=>$eposta];
-        $user->SetData(1,$userObjects);
+        echo "ASD".$duzenleid;
+        //$user->SetData($duzenleid,$userObjects);
     ?>
 <div class="card-header">
     <strong>Kullanıcı</strong> Form
 </div>
+
 <?php
     $formObjects =["name"=>"userform","id"=>"userform","action"=>$_SERVER['REQUEST_URI'],"method"=>"post","class"=>""];
     $form->doForm("basla",$formObjects);
 ?>
 <form action="<?=$_SERVER['REQUEST_URI']?>" id="userform" method="post" class="">
+<?=$form->doHidden(array('duzenleid',"$duzenleid"));?>
 <div class="card-body card-block">
 <?php   
     $UserNameSurnameObjects = ['id'=> "adsoyad",'name'=> "adsoyad",'value'=> "Ad Soyad",'type'=> "text",'class'=>"form-control",'placeholder'=>"Ad Soyad"]; 

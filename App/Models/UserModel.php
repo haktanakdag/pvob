@@ -16,16 +16,18 @@
     }
 
     public function setData($dataid,$data){
-        print_r($data);
-        /*if ($dataid =0){
-            //insert yazacam
+        
+        //echo $dataid;
+        if($dataid==0 or $dataid=""){
+            $q ="INSERT INTO kullanicilar(adsoyad,email) VALUES('".$data[name]."','".$data[eposta]."')";
+            $this->Query($q);
         }else{
-            //update yapacam
+            $q ="UPDATE kullanicilar SET adsoyad='".$data[name]."', email='".$data[eposta]."' where id =".$dataid;
+            $this->Query($q);
+            //echo $q;
+
         }
-        foreach ($data as $d){
-            echo $d;
-        }
-        return $d;*/
+       
     }
 
     public function getDataId($userId){

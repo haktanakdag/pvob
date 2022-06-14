@@ -260,7 +260,7 @@
         echo "<a href='$ozellikler[2]' class='$class' name='$ozellikler[0]' $target  $onclick >$ozellikler[1]</a>";
         }
         public function doHidden($ozellikler){
-            echo "<input type='hidden' id='$ozellikler[0]' value='$ozellikler[1]'/>";
+            echo "<input type='hidden' name='$ozellikler[0]' id='$ozellikler[0]' value='$ozellikler[1]'/>";
         }
         public function doSelect($ozellikler,$data){
                 echo "<select name='$ozellikler[0]' id='$ozellikler[0]' class ='select'>";

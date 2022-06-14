@@ -19,7 +19,7 @@ class UserController extends Framework {
     }
 
     public function SetData($dataid,$data){
-        print_r($data);
+        //print_r($data);
         $model = new UserModel();
         $return = $model->setData($dataid,$data);
        /* foreach($d as $data){
